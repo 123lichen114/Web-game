@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "158874",
+      "name": "people",
+      "font_class": "people",
+      "unicode": "e736",
+      "unicode_decimal": 59190
+    },
+    {
+      "icon_id": "1198958",
+      "name": "back-to-top",
+      "font_class": "back-to-top",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "4766685",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e7c6",
+      "unicode_decimal": 59334
+    },
+    {
+      "icon_id": "8106270",
+      "name": "phone",
+      "font_class": "phone",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    },
+    {
+      "icon_id": "22550022",
+      "name": "BACKGROUND_L",
+      "font_class": "BACKGROUND_L",
+      "unicode": "e9dc",
+      "unicode_decimal": 59868
+    }
+  ]
+}

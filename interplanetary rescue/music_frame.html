@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<frameset cols="0%,100%">
+		<frame name="mus" src="music.html"/> //背景音乐
+		<frame name="str" src="start.html"/>  //要添加背景音乐的页面
+	</frameset>
+	<script>
+		var mai=window.frames["str"].document.getElementsByTagName("body")[0];
+		var aud=window.frames["mus"]. document.getElementsByTagName("audio")[0];
+		mai.addEventListener("click",function(){
+        aud.play();
+    });
+	</script>
+</html>

@@ -1,0 +1,57 @@
+html,body{
+	height: 100%;
+	background: url("../img/backgurand/star2.gif") no-repeat center center;
+	background-size: cover;
+	background-attachment:fixed;
+}
+#LC{
+	position:absolute;left:200px;top:200px;
+}
+.content {
+	color:red;
+	width: 420px;
+	height: 400px;
+	margin: auto;
+	font-style: italic;
+	text-align: center;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	background-color: wheat;
+	
+}	
+        .intro a  {
+        	text-shadow:2px 2px brown;
+             text-align: center;
+            color: yellowgreen;
+            font-size: 30px;
+        }
+        .intro h1  {
+			text-shadow:2px 2px brown;
+	         text-align: center;
+            color: burlywood;
+            font-size: 100px;
+        }
+        .intro  span {
+            transition: 1s;
+        }
+
+        .intro :hover span:nth-child(1){
+            margin-right: 10px;
+        }
+
+        .intro :hover span:nth-child(1){
+            margin-left: 30px;
+        }
+
+        .intro  span:nth-child(1)::after {
+            opacity: 0;
+            transition: 2s;
+        }
+
+        .intro :hover span
+		{
+            color: skyblue;
+            text-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff;
+        }

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+a {
+    text-decoration: none;
+}
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: url('../img/start_bg.jpg') no-repeat 0px 0px;
+    background-size: cover;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body div.main div.btns {
+    height: 500px;
+    width: 300px;
+    position: absolute;
+    top: 40%;left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(0, -35%);
+}
+body div.main div.btn {
+    cursor: pointer;
+    height: 100px;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 108px;
+    margin-top: 0;
+    padding-left: 100px;
+    padding-top: 0;
+    border-color: cornsilk;
+    color: aliceblue;
+    border-style: hidden;
+    border-radius: 15px;
+}
+body div.main div.btn img{
+    width: 100%;
+    height: 100%;
+}
+
+body div.main div.logo {
+    float: right;
+    margin-top: 10px;
+    height: 100px;
+    width: 250px;
+    background: url('../img/大图标.png') no-repeat;
+    background-size: cover;
+}
+body div.main div.store {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    visibility: hidden;
+}
+body div.main div.store div.close {
+    position: absolute;
+    left: 580px;
+    top: -15px;
+    overflow: hidden;
+    color: rgb(129, 129, 158);
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    background-color: rgb(255, 0, 43);
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+body div.main div.store div.head {
+    margin: 20px auto;
+    width: 300px;
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 32px;
+}
+body div.main div.store div.choices {
+    margin: 20px auto;
+    width: 550px;
+    height: 350px;
+    background-color: #000;
+}
+body div.main div.store div.choices div.choice {
+    float: left;
+    width: 260px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+body div.main div.store div.choices div.choice h4 {
+    float: left;
+    width: 60px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 24px;
+    text-align: center;
+}
+body div.main div.store div.choices div.choice>span h5{
+    float: left;
+    text-align: center;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+body div.main div.store div.choices div.choice>span span {
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    width: 200px;
+    margin: 20px auto;
+}
+.wrap div .active1 {
+    transform: rotateY(180deg) !important;
+}
+
+.wrap div .active2 {
+    transform: rotateY(360deg) !important;
+}

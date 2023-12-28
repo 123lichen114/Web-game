@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开始游戏</title>
+    <link rel="stylesheet" href="./css/start.css">
+</head>
+
+<body>
+    <audio src="./video/bgm.mp3" autoplay="autoplay"></audio>
+    <div class="main">
+        <div class="btns">
+            <div class="new btn"><img src="./img/新游戏.png" alt="新游戏"></div>
+            <div class="continue btn"><img src="./img/继续游戏.png" alt="继续游戏"></div>
+            <a href="登录注册.html">
+                <div class="login btn">
+                    <img src="./img/登录注册.png" alt="登录注册">
+                </div>
+            </a>
+
+
+            <div class="achieve btn">
+                <img src="./img/成就.png" alt="成就">
+            </div>
+
+
+            <a href="index.html">
+                <div class="return btn">
+                    <img src="./img/返回主页.png" alt="返回主页">
+                </div>
+            </a>
+
+        </div>
+        <div class="store">
+            <div class="head">
+                游戏存档
+            </div>
+
+            <div class="choices">
+                <div class="choice">
+                    <h4>1</h4>
+                    <span>
+                        <h5>进度</h5>
+                        <span class="time">时间戳</span>
+                    </span>
+                </div>
+                <div class="choice">
+
+                    <h4>2</h4>
+                    <span>
+                        <h5>进度</h5>
+                        <span class="time">时间戳</span>
+                    </span>
+                </div>
+                <div class="choice">
+
+                    <h4>3</h4>
+                    <span>
+                        <h5>进度</h5>
+                        <span class="time">时间戳</span>
+                    </span>
+                </div>
+                <div class="choice">
+
+                    <h4>4</h4>
+                    <span>
+                        <h5>进度</h5>
+                        <span class="time">时间戳</span>
+                    </span>
+                </div>
+                <div class="choice">
+
+                    <h4>5</h4>
+                    <span>
+                        <h5>进度</h5>
+                        <span class="time">时间戳</span>
+                    </span>
+                </div>
+                <div class="choice">
+                    <h4>6</h4>
+                    <span>
+                        <h5>进度</h5>
+                        <span class="time">时间戳</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="close">×</div>
+        </div>
+        <div class="logo"></div>
+    </div>
+    <script src="js/start.js"></script>
+</body>
+<script src="js/start.js"></script>
+<script>
+    var mai=document.getElementsByTagName("body")[0];
+    var aud=document.getElementsByTagName("audio")[0];
+    document.addEventListener("click",function(){
+        aud.play();
+    });
+</script>
+</html>

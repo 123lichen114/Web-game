@@ -1,0 +1,52 @@
+.mainpage1{
+    height: 882px;
+    width: 100%;
+    overflow: hidden;
+    background-position: center 0px;
+    background-image: url("../img/background3.jpg");
+    background-attachment:fixed;
+}
+
+.mainpage1 .background_intro{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40%;
+    margin: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 250px;
+}
+
+.mainpage1 .background_intro h1{
+    text-align: center;
+    font-family: 微软雅黑;
+    font-size: 25px;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+.mainpage1 .background_intro p{
+    display: block;
+    margin: 5px;
+    text-indent: 2em;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 微软雅黑;
+    color: aliceblue;
+}
+
+.mainpage1 h2{
+    text-align: center;
+    font-family: 微软雅黑;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgba(240, 248, 255,0.5);
+    position: absolute;
+    top: 250px;
+    left: 1075px;
+}
+
+.mainpage1 video{
+    position: absolute;
+    top: 300px;
+    left: 800px;
+}

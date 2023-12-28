@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100px;width: 100%;
+    z-index: 10;
+}
+
+.header .logo{
+    float: left;
+    text-align: center;
+    margin: -1px 0 0 164px;
+    height: 98px;
+    width: 135px;
+}
+
+.header .nav {
+    float: left;
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+    text-align: center;
+    height: 100px;
+    width: 150px;
+}
+
+.header .nav:hover{
+    background-color: rgb(255,255,255,0.4);
+    font-weight: bold;
+}
+
+.header .nav span{
+    color: #000;
+    font-size: 20px;
+}
+
+.header .nav p{
+    font-size: 20px;
+    font-family: 楷体;
+    color: #000;
+}
+
+.header .lang {
+    float: right;
+    text-align: center;
+    margin: 10px;
+}
+
+.header .lang a{
+    font-family: 楷体;
+    font-size: 20px;
+    color: #000;
+}
+
+.header .lang a:hover{
+    color: rgb(0, 89, 255);
+    cursor:pointer;
+}
+
+.header .lang a:active{
+    color: rgb(255, 0, 0);
+    cursor:pointer;
+}
+
+.back_to_top{
+    background-color: rgb(255,255,255,0.4);
+    text-align: center;
+    width: 80px;height: 80px;
+    position: fixed;
+    left: 1400px;top: 700px;
+}
+
+.back_to_top span{
+    font-size: 50px;
+    color: black;
+}
+
+.back_to_top p{
+    font-size: 12px;
+    color: #000;
+}
+
+.footer{
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    padding: 50px;
+}
+
+.footer p{
+    color: aliceblue;
+}

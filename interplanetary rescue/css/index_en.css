@@ -1,0 +1,103 @@
+.mainpage1{
+    height: 882px;
+    width: 100%;
+    overflow: hidden;
+    background-position: center 0px;
+    background-image: url("../img/background1.jpg");
+    background-attachment:scroll;
+}
+.mainpage1 .background_intro{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    border-radius: 10px;
+    position: absolute;
+    top: 200px;left: 270px;
+}
+
+.mainpage1 .background_intro p{
+    display: block;
+    margin: 5px;
+    text-indent: 2em;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+
+
+.caption{
+    width: 100%;
+    text-align: center;
+    line-height: 2.5;
+    background: linear-gradient(to bottom, rgb(16, 19, 54, 0.7), rgba(2, 30, 45, 0.7)); 
+}
+
+.caption p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    font-size: larger;
+}
+
+.mainpage2{
+    height: 882px;
+    width: 100%;
+    overflow: hidden;
+    background-position: bottom 0px;
+    background-image: url("../img/background2.jpg");
+    background-attachment:scroll;
+}
+
+.key_word strong{
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 100px;
+    color:rgba(255, 255, 255, 0.5);
+}
+
+#tag1{
+    position: relative;
+    top: 100px;
+    float: right;
+}
+
+#tag2{
+    position: relative;
+    top: 250px;
+    float: left;
+}
+
+#tag3{
+    position: relative;
+    top: 400px;
+    overflow: hidden;
+    clear: both;
+    float: right;
+}
+
+#tag4{
+    position: relative;
+    top: 550px;
+    overflow: hidden;
+    clear: both;
+    float: left;
+}
+
+.began{
+    position: relative;
+    top: 450px;
+    overflow: hidden;
+    clear: both;
+    float: right;
+    text-align: center;
+}
+
+.bagan p{
+    font-size: 100px;
+    color: red;
+}
+
+.began img{
+    width: 150px;
+    height: 150px;
+}
+

@@ -1,0 +1,31 @@
+body{
+	background-image:url(img/yjpbackground.jpg);
+	margin:0;
+	background-size:cover;
+}
+#box{
+	color: rgb(255, 250, 240);
+            width: 650px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            text-align: center;
+            margin: auto;
+            margin-top: 5%;
+            font-family: 'Times New Roman', sans-serif;
+	font-size:30px;
+}
+
+#bread{
+	 border-bottom:1px black dotted;
+ 	padding:3px;
+ 	text-align:left;
+}
+#footer{
+    font-size: small;
+}
+
+.box-img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+}
