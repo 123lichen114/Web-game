@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <script src="achievement.js"></script>
+    <title>成就</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+            background-image: url("bg.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        header {
+            margin: 50px auto;
+            width: 300px;
+            height: auto;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 隶书;
+            font-size: 100px;
+            color: rgba(0, 55, 255, 0.4);
+        }
+
+        .mainpage {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .re-box {
+            margin: 90px;
+        }
+
+        .re-item {
+            width: 200px;
+            height: 300px;
+            cursor: pointer;
+            position: relative;
+            perspective: 500;
+            -webkit-perspective: 500;
+        }
+
+        .re-item-front {
+            border-radius: 10px;
+            background-image: url("./card.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .re-item-front,
+        .re-item-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            -webkit-perspective: 1000;
+            backface-visibility: hidden;
+            transition: all 1.5s;
+            box-shadow: rgba(50, 50, 50, 0.2) 0 0 15px;
+            overflow: hidden;
+        }
+
+        .re-item-back {
+            position: relative;
+            transform: rotateY(-180deg);
+            -webkit-transform: rotateY(-180deg);
+        }
+
+        .re-item:hover .re-item-front {
+            transform: rotateY(-180deg);
+            -webkit-transform: rotateY(-180deg);
+
+        }
+
+        .re-item:hover .re-item-back {
+            transform: rotateY(-360deg);
+            -webkit-transform: rotateY(-360deg);
+
+        }
+
+        .re-item-back img {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+
+        .get_method {
+            background-image: url(./bg.jpeg);
+            background-size: cover;
+            height: 200px;
+        }
+
+        .get_method p,
+        h2 {
+            color: #fff;
+            margin: 0;
+        }
+
+        #unlock1,
+        #unlock2,
+        #unlock3,
+        #unlock4,
+        #unlock5,
+        #unlock6,
+        #unlock7,
+        #unlock8,
+        #unlock9,
+        #unlock10,
+        #unlock11,
+        #unlock12 {
+            display: none;
+        }
+
+        #lock1,
+        #lock2,
+        #lock3,
+        #lock4,
+        #lock5,
+        #lock6,
+        #lock7,
+        #lock8,
+        #lock9,
+        #lock10,
+        #lock11,
+        #lock12 {
+            display: block;
+        }
+		#return{
+		    width: 10%;
+		    height:12%;
+		    right: 2%;
+		    position: absolute;
+		    float: right;
+		     background-image: url(返回.png);
+		     background-size: cover;
+		    margin-top: 0;
+		    z-index: 1000;
+		}
+		#return p{
+		    color: powderblue;
+		    text-shadow: 0 0 5px lightblue;
+		    font-family: 楷体;
+		    margin-top:25%;
+		    margin-left: 22%;
+		    font-size: 20px;
+		    transition: 0.5s;
+		}
+		#return p:hover{
+		    font-size: 22px;
+		    margin-top: 27%;
+		    margin-left: 25%;
+		    text-shadow: 0 0 10px lightblue;
+		}
+    </style>
+
+</head>
+
+<body>
+    <script>
+        var player = localStorage.getItem("currentUser");
+        var info = JSON.parse(localStorage.getItem(player));
+        if (info["achi7"] == 1 &&info["achi8"] == 1&&info["achi9"] == 1&&info["achi10"] == 1&&info["achi12"] != 1) {
+            info["achi12"] = 1;
+            localStorage.setItem(info.username, JSON.stringify(info));
+        }
+        if (info["achi6"] == 1 &&info["achi5"] == 1&&info["achi4"] == 1&&info["achi3"] == 1&&info["achi2"] == 1&&info["achi1"] == 1&&info["achi11"] != 1) {
+            info["achi11"] = 1;
+            localStorage.setItem(info.username, JSON.stringify(info));
+        }
+    </script>
+    <header>
+        <h1>成就</h1>
+    </header>
+	<div id="return" onclick="backtoindex()"><p>返回主页</p></div>
+    <div class="mainpage">
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock1">
+                        <img src="./成就1.png" alt="成就1" />
+                        <div class="get_method" id="get_method1">
+                            <h2>潜入基地</h2>
+                            <p>“在机智的解开了密码锁后成功潜入基地，开始了一段惊心动魄的旅途”</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock1">
+                        <img src="lock.png" alt="成就1" />
+                        <div class="get_method" id="get_method1">
+                            <h2>潜入基地</h2>
+                            <p>解锁方式:<br>通关合成地球游戏成功潜入基地</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock2">
+                        <img src="./成就2.jpg" alt="成就2" />
+                        <div class="get_method" id="get_method2">
+                            <h2>外星之旅</h2>
+                            <p>“踏上飞船！Liu一行开始了遥远的外星之旅”</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock2">
+                        <img src="lock.png" alt="成就2" />
+                        <div class="get_method" id="get_method1">
+                            <h2>外星之旅</h2>
+                            <p>解锁方式:<br>成功解开密码锁登上飞船</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock3">
+                        <img src="./成就3.png" alt="成就3" />
+                        <div class="get_method" id="get_method3">
+                            <h2>追捕！</h2>
+                            <p>“追上Heir博士，Liu能否成功维护正义？”</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock3">
+                        <img src="lock.png" alt="成就3" />
+                        <div class="get_method" id="get_method3">
+                            <h2>追捕！</h2>
+                            <p>解锁方式:<br>小游戏中驾驶飞行器成功躲避障碍追上Heir博士</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock4">
+                        <img src="./成就4.png" alt="成就4" />
+                        <div class="get_method" id="get_method4">
+                            <h2>拼图大师</h2>
+                            <p>“足智多谋的Liu再一次阻止了Heir的阴谋”</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock4">
+                        <img src="lock.png" alt="成就4" />
+                        <div class="get_method" id="get_method1">
+                            <h2>拼图大师</h2>
+                            <p>解锁方式:<br>40秒内通关拼图解开保护罩上的智能锁</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock5">
+                        <img src="./成就5.png" alt="成就5" />
+                        <div class="get_method" id="get_method5">
+                            <h2>孤身直入</h2>
+                            <p>“选择不报警的Liu孤身闯入新宇宙集团”</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock5">
+                        <img src="lock.png" alt="成就5" />
+                        <div class="get_method" id="get_method5">
+                            <h2>孤身直入</h2>
+                            <p>解锁方式:<br>选择不报警并成功通过游戏进入新宇宙集团</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock6">
+                        <img src="./成就6.png" alt="成就6" />
+                        <div class="get_method" id="get_method6">
+                            <h2>躲避陨石</h2>
+                            <p>“运用高超的驾驶技术，Liu一行成功驶出陨石带”</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock6">
+                        <img src="lock.png" alt="成就6" />
+                        <div class="get_method" id="get_method6">
+                            <h2>躲避陨石</h2>
+                            <p>解锁方式:<br>在小游戏中成功驾驶飞船穿过陨石带</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock7">
+                        <img src="./成就7.png" alt="成就7" />
+                        <div class="get_method" id="get_method7">
+                            <h2>伽马援手</h2>
+                            <p>“在伽马星人的帮助下，Liu毫发无伤，并救出了母亲”</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock7">
+                        <img src="lock.png" alt="成就7" />
+                        <div class="get_method" id="get_method7">
+                            <h2>伽马援手</h2>
+                            <p>解锁方式:<br>结局完成剧情第20幕成功完成游戏后被伽马星人救助</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock8">
+                        <img src="./成就8.png" alt="成就8" />
+                        <div class="get_method" id="get_method8">
+                            <h2>功亏一篑</h2>
+                            <p>“阻止Heir失败，Liu也在爆炸中死亡”</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock8">
+                        <img src="lock.png" alt="成就8" />
+                        <div class="get_method" id="get_method8">
+                            <h2>功亏一篑</h2>
+                            <p>解锁方式:<br>结局完成剧情第20幕游戏时间超过90s阻止Heir失败</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock9">
+                        <img src="./成就9.png" alt="成就9" />
+                        <div class="get_method" id="get_method9">
+                            <h2>分解！传送！</h2>
+                            <p>“Heir被分解传送”</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock9">
+                        <img src="lock.png" alt="成就9" />
+                        <div class="get_method" id="get_method9">
+                            <h2>分解！传送！</h2>
+                            <p>解锁方式:<br>结局将Heir被分解传送获得</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock10">
+                        <img src="./成就10.png" alt="成就10" />
+                        <div class="get_method" id="get_method10">
+                            <h2>恶有恶报</h2>
+                            <p>Heir博士最终得到了应有的报应</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock10">
+                        <img src="lock.png" alt="成就10" />
+                        <div class="get_method" id="get_method10">
+                            <h2>恶有恶报</h2>
+                            <p>解锁方式:<br>结局Heir自爆飞船获得</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock11">
+                        <img src="./成就11.png" alt="成就11" />
+                        <div class="get_method" id="get_method11">
+                            <h2>游戏大师</h2>
+                            <p>恭喜成功通过所有游戏</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock11">
+                        <img src="lock.png" alt="成就11" />
+                        <div class="get_method" id="get_method11">
+                            <h2>游戏大师</h2>
+                            <p>解锁方式:<br>成功通过所有游戏</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="re-box">
+            <div class="re-item">
+                <div class="re-item-front">
+                </div>
+                <div class="re-item-back">
+                    <div class="unlock" id="unlock12">
+                        <img src="./成就12.png" alt="成就12" />
+                        <div class="get_method" id="get_method12">
+                            <h2>剧情探索者</h2>
+                            <p>解锁方式:<br>通关合成地球游戏成功潜入基地</p>
+                        </div>
+                    </div>
+                    <div class="lock" id="lock12">
+                        <img src="lock.png" alt="成就12" />
+                        <div class="get_method" id="get_method12">
+                            <h2>剧情探索者</h2>
+                            <p>解锁方式:<br>成功探索完所有剧情</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="achievement.js"></script>
+
+</html>
